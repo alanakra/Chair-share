@@ -1,3 +1,5 @@
+<?php
+require'./include/logs.php' ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,12 +21,14 @@
      <tr>
        <th scope="col">Date</th>
        <th scope="col">Masse</th>
+       <th scope="col">Temps assis</th>
      </tr>
    </thead>
    <tbody>
     <tr>
-     <td></td>
-     <td></td>
+      <?php while ($row = $stmt->fetch()): ?>
+        <td><?php echo $row=$stmt['nom'] ?></td>
+      <?php endwhile; ?>
    </tr>
    </tbody>
    </table>
